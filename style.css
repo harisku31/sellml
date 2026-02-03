@@ -1,0 +1,497 @@
+/* =========================
+   RESET & BASE
+========================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:system-ui, sans-serif;
+}
+
+html, body{
+  height:100%;
+}
+
+body{
+  background:radial-gradient(circle at top,#1b2a4e,#070b18);
+  background-attachment:fixed;
+  color:#fff;
+}
+
+/* =========================
+   MOBILE CONTAINER
+========================= */
+.mobile{
+  max-width:430px;
+  margin:auto;
+  min-height:100vh;
+  padding:6px;
+}
+
+/* =========================
+   BANNER / IKLAN
+========================= */
+.iklan{
+  position:relative;
+  width:100%;
+  aspect-ratio:21/9;
+  border-radius:18px;
+  background:linear-gradient(145deg,#0f1e3d,#060b18);
+  border:1px solid rgba(0,170,255,.35);
+  box-shadow:
+    0 0 25px rgba(0,180,255,.35),
+    inset 0 0 20px rgba(0,140,255,.25);
+}
+
+.iklan img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:18px;
+}
+
+/* =========================
+   PROFIL HERO
+========================= */
+.profil{
+  position:absolute;
+  bottom:-10px;
+  left:12px;
+  width:97px;
+  height:97px;
+  padding:5px;
+  border-radius:22px;
+  background:linear-gradient(145deg,#1dafff,#005eff);
+  box-shadow:
+    0 0 28px rgba(0,170,255,1),
+    0 0 56px rgba(0,90,255,.9);
+}
+
+.profil img{
+  width:100%;
+  height:100%;
+  border-radius:17px;
+  object-fit:cover;
+  background:#000;
+}
+
+/* =========================
+   MENU TAB
+========================= */
+.menu-tabs{
+  display:flex;
+  gap:8px;
+  margin-top:20px;
+}
+
+.tab{
+  flex:1;
+  padding:10px 6px;
+  border-radius:14px;
+  font-size:12px;
+  font-weight:600;
+  text-align:center;
+  cursor:pointer;
+  color:#9fdcff;
+  background:linear-gradient(145deg,#0d1c36,#050b18);
+  border:1px solid rgba(0,170,255,.25);
+  transition:.25s;
+}
+
+.tab small{
+  font-size:10px;
+  opacity:.8;
+}
+
+.tab.active{
+  color:#fff;
+  background:linear-gradient(145deg,#1dafff,#005eff);
+  box-shadow:
+    0 0 14px rgba(0,170,255,.9),
+    0 0 28px rgba(0,90,255,.7);
+}
+
+/* =========================
+   LIST PAKET
+========================= */
+.paket-container{
+  margin-top:14px;
+}
+
+.paket{
+  display:none;
+}
+
+.paket.active{
+  display:block;
+}
+
+/* =========================
+   ITEM PAKET
+========================= */
+.item{
+  position:relative;
+  margin-bottom:10px;
+  padding:12px 44px 12px 12px;
+  border-radius:14px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:linear-gradient(145deg,#0d1c36,#050b18);
+  border:1px solid rgba(0,170,255,.25);
+  transition:.2s;
+}
+
+.item:active{
+  transform:scale(.98);
+}
+
+.item.selected{
+  border:2px solid #00c8ff;
+  box-shadow:0 0 18px rgba(0,200,255,.9);
+}
+
+.nama{
+  font-size:13px;
+  line-height:1.3;
+}
+
+.harga{
+  font-size:13px;
+  font-weight:700;
+  color:#6ff3ff;
+  white-space:nowrap;
+}
+
+/* =========================
+   CANCEL (X)
+========================= */
+.cancel{
+  position:absolute;
+  right:12px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:18px;
+  font-weight:800;
+  color:#ff4d4d;
+  cursor:pointer;
+}
+
+/* =========================
+   TOTAL HARGA / KASIR
+========================= */
+.kasir{
+  margin-top:14px;
+  padding:12px;
+  border-radius:16px;
+  background:linear-gradient(145deg,#050b18,#0d1c36);
+  border:1px solid rgba(0,170,255,.35);
+}
+
+.kasir-info span{
+  font-size:12px;
+  opacity:.8;
+}
+
+.kasir-info strong{
+  display:block;
+  font-size:18px;
+  font-weight:800;
+  color:#6ff3ff;
+}
+
+/* =========================
+   PAY BUTTON
+========================= */
+.pay-button{
+  width:100%;
+  margin-top:12px;
+  padding:14px;
+  border:none;
+  border-radius:16px;
+  background:#1dafff;
+  color:#fff;
+  font-size:14px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.pay-button:active{
+  transform:scale(.97);
+}
+
+/* =========================
+   PESAN / CARA TOP UP
+========================= */
+.pesan-topup{
+  margin-top:14px;
+  padding:14px;
+  border-radius:16px;
+  background:linear-gradient(145deg,#0d1c36,#050b18);
+  border:1px solid rgba(0,170,255,.25);
+}
+
+.pesan-topup h3{
+  font-size:14px;
+  margin-bottom:8px;
+  color:#6ff3ff;
+}
+
+.pesan-topup ol{
+  padding-left:18px;
+}
+
+.pesan-topup li{
+  font-size:12px;
+  line-height:1.5;
+  margin-bottom:6px;
+}
+
+.pesan-topup small{
+  display:block;
+  opacity:.8;
+  font-size:11px;
+  margin-top:2px;
+}
+
+.pesan-topup .peringatan{
+  color:#ff6b6b;
+  font-weight:600;
+}
+
+/* =========================
+   PAYMENT METHOD
+========================= */
+.payment-section{
+  margin-top:14px;
+  padding:14px;
+  border-radius:16px;
+  background:linear-gradient(145deg,#0d1c36,#050b18);
+  border:1px solid rgba(0,170,255,.25);
+}
+
+.payment-section h3{
+  font-size:14px;
+  margin-bottom:10px;
+  color:#6ff3ff;
+}
+
+.payment-list{
+  display:flex;
+  gap:10px;
+}
+
+.payment-item{
+  flex:1;
+  padding:10px;
+  border-radius:14px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.payment-item img{
+  height:32px;
+  object-fit:contain;
+}
+
+/* =========================
+   BUTTON BAYAR SEKARANG
+========================= */
+.bayar-button{
+  width:100%;
+  margin-top:14px;
+  padding:15px;
+  border:none;
+  border-radius:16px;
+  background:linear-gradient(145deg,#1dafff,#005eff);
+  color:#fff;
+  font-size:15px;
+  font-weight:800;
+  cursor:pointer;
+  box-shadow:
+    0 0 16px rgba(0,170,255,.8),
+    0 0 32px rgba(0,90,255,.6);
+}
+
+.bayar-button:active{
+  transform:scale(.97);
+}
+
+/* =========================
+   DATA AKUN PEMBELI
+========================= */
+.akun-section{
+  margin-top:14px;
+  padding:14px;
+  border-radius:16px;
+  background:linear-gradient(145deg,#0d1c36,#050b18);
+  border:1px solid rgba(0,170,255,.25);
+}
+
+.akun-section h3{
+  font-size:14px;
+  margin-bottom:12px;
+  color:#6ff3ff;
+}
+
+.input-group{
+  margin-bottom:12px;
+}
+
+.input-group label{
+  display:block;
+  font-size:12px;
+  margin-bottom:4px;
+  opacity:.85;
+}
+
+.input-group input{
+  width:100%;
+  padding:12px;
+  border-radius:12px;
+  border:1px solid rgba(0,170,255,.25);
+  background:#050b18;
+  color:#fff;
+  font-size:13px;
+}
+
+.input-group input::placeholder{
+  color:#9fb6d9;
+}
+
+.input-group input:disabled{
+  opacity:.6;
+}
+
+/* =========================
+   INPUT WHATSAPP
+========================= */
+.wa-input{
+  display:flex;
+  align-items:center;
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid rgba(0,170,255,.25);
+  background:#050b18;
+}
+
+.wa-input span{
+  padding:12px;
+  background:#0d1c36;
+  font-size:13px;
+  color:#6ff3ff;
+}
+
+.wa-input input{
+  border:none;
+  outline:none;
+  flex:1;
+  background:transparent;
+  padding:12px;
+  color:#fff;
+}
+
+/* =========================
+   NOTE / KETERANGAN
+========================= */
+.akun-note{
+  margin-top:10px;
+}
+
+.akun-note p{
+  font-size:11px;
+  line-height:1.4;
+  opacity:.75;
+}
+
+/* =========================
+   QRIS GOPAY
+========================= */
+.qris-section{
+  margin-top:12px;
+  padding:10px;
+  border-radius:14px;
+  background:#fff;
+  display:none;
+}
+
+.qris-section img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:10px;
+  object-fit:contain;
+}
+
+/* =========================
+   SOSIAL MEDIA
+========================= */
+.sosmed-section{
+  margin-top:16px;
+  padding:14px;
+  border-radius:16px;
+  background:linear-gradient(145deg,#0d1c36,#050b18);
+  border:1px solid rgba(0,170,255,.25);
+}
+
+.sosmed-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+}
+
+.sosmed-item img{
+  width:42px;
+  height:42px;
+  border-radius:12px;
+  object-fit:cover;
+}
+
+.sosmed-text span{
+  display:block;
+  font-size:14px;
+  font-weight:700;
+  color:#fff;
+}
+
+.sosmed-text small{
+  font-size:12px;
+  color:#9fdcff;
+}
+
+/* =========================
+   KONSULTASI WHATSAPP
+========================= */
+.konsultasi-section{
+  margin-top:16px;
+  padding:14px;
+  border-radius:16px;
+  background:linear-gradient(145deg,#0d1c36,#050b18);
+  border:1px solid rgba(0,170,255,.25);
+  text-align:center;
+}
+
+.konsultasi-text{
+  font-size:13px;
+  margin-bottom:12px;
+  color:#cfe9ff;
+}
+
+.konsultasi-button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:16px;
+  background:linear-gradient(145deg,#25D366,#1ebe5d);
+  color:#fff;
+  font-size:14px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.konsultasi-button:active{
+  transform:scale(.97);
+}
