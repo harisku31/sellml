@@ -301,7 +301,7 @@ Sekian, minta diproses ya
    KONSULTASI WHATSAPP
 ========================= */
 const konsultasiButton = document.querySelector('.konsultasi-button');
-const adminWAKonsultasi = '6281234567890'; // GANTI DENGAN WA KAMU
+const adminWAKonsultasi = '6281809730331'; // GANTI DENGAN WA KAMU
 
 if(konsultasiButton){
   konsultasiButton.addEventListener('click', () => {
@@ -310,3 +310,4 @@ if(konsultasiButton){
     window.open(url, '_blank');
   });
 }
+
